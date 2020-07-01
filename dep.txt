@@ -1,0 +1,37 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] consumer                                                           [jar]
+[INFO] producer                                                           [jar]
+[INFO] contract-test-example                                              [pom]
+[INFO] 
+[INFO] --------------------< io.mosfet.contracts:consumer >--------------------
+[INFO] Building consumer 0.0.1-SNAPSHOT                                   [1/3]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:3.1.2:tree (default-cli) @ consumer ---
+Downloading from caplan-maven: http://onebuild.bmc.com:8081/nexus/content/groups/public/org/apache/maven/doxia/doxia-sink-api/1.9/doxia-sink-api-1.9.pom
+Downloading from caplan-maven: http://onebuild.bmc.com:8081/nexus/content/groups/public/org/apache/maven/doxia/doxia-core/1.9/doxia-core-1.9.pom
+Downloading from caplan-maven: http://onebuild.bmc.com:8081/nexus/content/groups/public/org/apache/maven/doxia/doxia-site-renderer/1.9/doxia-site-renderer-1.9.pom
+Downloading from caplan-maven: http://onebuild.bmc.com:8081/nexus/content/groups/public/org/codehaus/plexus/plexus-archiver/4.2.2/plexus-archiver-4.2.2.pom
+Downloading from caplan-maven: http://onebuild.bmc.com:8081/nexus/content/groups/public/org/apache/maven/shared/maven-dependency-analyzer/1.11.1/maven-dependency-analyzer-1.11.1.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for contract-test-example 0.0.1-SNAPSHOT:
+[INFO] 
+[INFO] consumer ........................................... FAILURE [  2.527 s]
+[INFO] producer ........................................... SKIPPED
+[INFO] contract-test-example .............................. SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.719 s
+[INFO] Finished at: 2020-06-24T22:41:13+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-dependency-plugin:3.1.2:tree (default-cli) on project consumer: Execution default-cli of goal org.apache.maven.plugins:maven-dependency-plugin:3.1.2:tree failed: Plugin org.apache.maven.plugins:maven-dependency-plugin:3.1.2 or one of its dependencies could not be resolved: Failed to collect dependencies at org.apache.maven.plugins:maven-dependency-plugin:jar:3.1.2 -> org.apache.maven.doxia:doxia-sink-api:jar:1.9: Failed to read artifact descriptor for org.apache.maven.doxia:doxia-sink-api:jar:1.9: Could not transfer artifact org.apache.maven.doxia:doxia-sink-api:pom:1.9 from/to caplan-maven (http://onebuild.bmc.com:8081/nexus/content/groups/public): No such host is known (onebuild.bmc.com) -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginResolutionException
